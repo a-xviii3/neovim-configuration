@@ -17,12 +17,8 @@ return {
 			function() require("todo-comments").jump_prev() end,
 			{ desc = "plugins/todocomments: jump to the previous todo comment" }
 		)
-		NKeymap(
-			"tl",
-			"<cmd>TodoQuickFix<CR>",
-			{
-				desc = "plugins/todocomments: show all todo comments in project quick fix list",
-			}
-		)
+		NKeymap("tl", "<cmd>TodoQuickFix<CR>", {
+			desc = "plugins/todocomments: show all todo comments in project quick fix list",
+		})
 	end,
 }

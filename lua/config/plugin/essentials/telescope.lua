@@ -62,19 +62,11 @@ return {
 			telescope_builtin.commands,
 			{ desc = "plugins/telescope: fuzzy find through all commands" }
 		)
-		NKeymap(
-			"gr",
-			require("telescope.builtin").lsp_references,
-			{
-				desc = "plugins/telescope: fuzzy find through the references of the word under cursor",
-			}
-		)
-		NKeymap(
-			"gI",
-			require("telescope.builtin").lsp_implementations,
-			{
-				desc = "plugins/telescope: fuzzy find throught the implemtations of word under cursor",
-			}
-		)
+		NKeymap("gr", require("telescope.builtin").lsp_references, {
+			desc = "plugins/telescope: fuzzy find through the references of the word under cursor",
+		})
+		NKeymap("gI", require("telescope.builtin").lsp_implementations, {
+			desc = "plugins/telescope: fuzzy find throught the implemtations of word under cursor",
+		})
 	end,
 }

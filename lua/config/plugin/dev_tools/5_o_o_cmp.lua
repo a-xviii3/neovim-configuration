@@ -163,38 +163,28 @@ return {
 			end
 		end, { desc = "plugins/cmp: close the cmp menu or just do <C-x>" })
 
-		Keymap(
-			{ "i", "s" },
-			"<TAB>",
-			function()
-				if cmp.visible() then
-					cmp.select_next_item()
-				elseif luasnip.expand_or_locally_jumpable() then
-					luasnip.expand_or_jump()
-				else
-					feedkeys("<TAB>")
-				end
-			end,
-			{
-				desc = "plugins/cmp: select next completion suggestion or snippet or just do TAB",
-			}
-		)
-		Keymap(
-			{ "i", "s" },
-			"<S-TAB>",
-			function()
-				if cmp.visible() then
-					cmp.select_prev_item()
-				elseif luasnip.locally_jumpable(-1) then
-					luasnip.jump(-1)
-				else
-					feedkeys("<S-TAB>")
-				end
-			end,
-			{
-				desc = "plugins/cmp: select previous completion suggestion or snippet or just do S-TAB",
-			}
-		)
+		Keymap({ "i", "s" }, "<TAB>", function()
+			if cmp.visible() then
+				cmp.select_next_item()
+			elseif luasnip.expand_or_locally_jumpable() then
+				luasnip.expand_or_jump()
+			else
+				feedkeys("<TAB>")
+			end
+		end, {
+			desc = "plugins/cmp: select next completion suggestion or snippet or just do TAB",
+		})
+		Keymap({ "i", "s" }, "<S-TAB>", function()
+			if cmp.visible() then
+				cmp.select_prev_item()
+			elseif luasnip.locally_jumpable(-1) then
+				luasnip.jump(-1)
+			else
+				feedkeys("<S-TAB>")
+			end
+		end, {
+			desc = "plugins/cmp: select previous completion suggestion or snippet or just do S-TAB",
+		})
 		Keymap({ "i", "s" }, "<CR>", function()
 			if not cmp.visible() and not cmp.get_active_entry() then
 				feedkeys("<CR>")
