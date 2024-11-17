@@ -14,8 +14,14 @@ return {
 		-- lsp_name = { lspopts },
 		lua_ls = { settings = { Lua = { callSnippet = "Replace" } } },
 	},
-	-- list of available formatters from https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
 	formatters = {
+		-- mason package names can differ from linter names
+		-- list of names can be found in mason via the :Mason command
+		mason = {
+			-- "mason_package_names",
+			"stylua",
+		},
+		-- possible formatters https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters
 		-- filetype = { "formatter1", "foramtter2", stop_after_first = false},
 		lua = { "stylua" },
 	},

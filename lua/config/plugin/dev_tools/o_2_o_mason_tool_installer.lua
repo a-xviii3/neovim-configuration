@@ -7,8 +7,8 @@ return {
 	config = function()
 		local ensure_installed_tools = {}
 
-		for _, formatters in pairs(Quick_Settings.formatters) do
-			for _, formatter_name in ipairs(formatters) do
+		if Quick_Settings.formatters.mason then
+			for _, formatter_name in pairs(Quick_Settings.formatters.mason) do
 				table.insert(ensure_installed_tools, formatter_name)
 			end
 		end
