@@ -115,7 +115,7 @@ return {
 			vim.api.nvim_set_hl(0, "CmpItemKindConstant", { fg = "#D19A66", reverse = false })
 			vim.api.nvim_set_hl(0, "CmpItemKindFile", { fg = "#61AFEF", reverse = false })
 			vim.api.nvim_set_hl(0, "CmpItemKindString", { fg = "#98C379", reverse = false })
-			vim.api.nvim_set_hl(0, "CmpItemKindOperator", { fg = "#E86621", reverse = false })
+			vim.api.nvim_set_hl(0, "CmpItemKindOperator", { fg = "#E86671", reverse = false })
 			vim.api.nvim_set_hl(0, "CmpItemKindBoolean", { fg = "#D19A66", reverse = false })
 			vim.api.nvim_set_hl(
 				0,
