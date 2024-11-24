@@ -48,7 +48,7 @@ return {
 
 		NKeymap("<leader>dt", dapui.toggle, { desc = "plugins/dapui: toggle the dap ui" })
 		NKeymap(
-			"<leader>ds",
+			"<leader>dr",
 			function() dapui.open({ reset = true }) end,
 			{ desc = "plugins/dapui: reset the dap ui" }
 		)
