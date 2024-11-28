@@ -5,7 +5,7 @@ local lazy_path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 -- definitely not a undefined field
 ---@diagnostic disable-next-line: undefined-field
 if not (vim.uv or vim.loop).fs_stat(lazy_path) then
-	local git_clone_output = vim.fb.system({
+	local git_clone_output = vim.fn.system({
 		"git",
 		"clone",
 		"--filter=blob:none",
