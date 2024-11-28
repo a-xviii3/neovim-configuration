@@ -1,5 +1,5 @@
 --[[ code completion engine ]]
-v
+
 return {
 	"hrsh7th/nvim-cmp",
 	name = "cmp",
