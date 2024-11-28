@@ -36,6 +36,7 @@ require("lazy").setup({
 		{ import = "config.plugin.aesthetics" },
 		Quick_Settings.plugins,
 	},
+	rocks = { enabled = false }, -- disable lua rocks support as we don't use it
 	install = { colorscheme = { "onedark", "habamax" } },
 	checker = { enabled = true, notify = false }, -- check for updates but don't notify
 	change_detection = { enabled = true, notify = false }, -- check for changes but dont't notify
