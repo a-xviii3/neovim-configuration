@@ -9,7 +9,7 @@ end, { desc = "core/custom: toggle relative line numbers" })
 
 -- toggle fold column
 NKeymap("zt", function()
-	-- vim.opt.relativenumber returns a table instead of the required value
+	-- vim.opt.foldcolumn returns a table instead of the required value
 	---@diagnostic disable-next-line: undefined-field
 	vim.opt.foldcolumn = vim.opt.foldcolumn._value == "0" and "auto:9" or "0"
 end, { desc = "core/custom: toggle relative line numbers" })

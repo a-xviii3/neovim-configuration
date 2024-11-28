@@ -95,6 +95,7 @@ return {
 			matching = { disallow_symbol_nonprefix_matching = false },
 		})
 
+		-- change some highlight groups
 		vim.defer_fn(function() -- doesn't work unless deferred for some reason
 			vim.api.nvim_set_hl(0, "CmpItemKindUnit", { fg = "#98C379", reverse = false })
 			vim.api.nvim_set_hl(0, "CmpItemKindProperty", { fg = "#56B6C2", reverse = false })
