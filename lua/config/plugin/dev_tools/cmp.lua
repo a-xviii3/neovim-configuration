@@ -1,5 +1,5 @@
 --[[ code completion engine ]]
-
+v
 return {
 	"hrsh7th/nvim-cmp",
 	name = "cmp",
@@ -28,6 +28,16 @@ return {
 		local lspkind = require("lspkind")
 
 		cmp.setup({
+			window = {
+				completion = cmp.config.window.bordered({
+					border = "single",
+					winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
+				}),
+				documentation = cmp.config.window.bordered({
+					border = "single",
+					winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
+				}),
+			},
 			-- these fields are not necessary for the config
 			---@diagnostic disable-next-line: missing-fields
 			formatting = {
