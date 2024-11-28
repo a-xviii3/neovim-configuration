@@ -10,9 +10,14 @@ return {
 	config = function()
 		local lspconfig = require("lspconfig")
 
+		local capabilities = vim.tbl_deep_extend(
+			"force",
+			vim.lsp.protocol.make_client_capabilities(),
+			require("cmp_nvim_lsp").default_capabilities()
+		)
+
 		for lsp_name, opts in pairs(Quick_Settings.lsps) do
-			local cmp_nvim_lsp = require("cmp_nvim_lsp")
-			opts.capabilities = cmp_nvim_lsp.default_capabilities()
+			opts.capabilities = vim.tbl_deep_extend("force", capabilities, opts.capabilities)
 			lspconfig[lsp_name].setup(opts)
 		end
 	end,
