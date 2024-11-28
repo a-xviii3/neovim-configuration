@@ -21,5 +21,8 @@ return {
 				additional_vim_regex_highlighting = false,
 			},
 		})
+
+		vim.opt.foldmethod = "expr"
+		vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 	end,
 }
