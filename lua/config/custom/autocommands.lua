@@ -62,13 +62,3 @@ create_aucmd("VimEnter", {
 	group = CUSTOM_AUGROUP,
 	callback = function() Quick_Settings.after() end,
 })
-
--- store and retrieve folding data
-create_aucmd({ "WinEnter", "BufRead", "BufEnter", "FocusGained" }, {
-	group = CUSTOM_AUGROUP,
-	command = "silent! loadview",
-})
-create_aucmd({ "WinLeave", "ExitPre", "BufWrite", "BufLeave", "FocusLost" }, {
-	group = CUSTOM_AUGROUP,
-	command = "silent! mkview",
-})
