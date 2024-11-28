@@ -17,7 +17,11 @@ return {
 		)
 
 		for lsp_name, opts in pairs(Quick_Settings.lsps) do
-			opts.capabilities = vim.tbl_deep_extend("force", capabilities, opts.capabilities)
+			opts.capabilities = vim.tbl_deep_extend(
+				"force",
+				capabilities,
+				opts.capabilities and opts.capabilities or {}
+			)
 			lspconfig[lsp_name].setup(opts)
 		end
 	end,
