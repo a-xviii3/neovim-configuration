@@ -3,7 +3,7 @@
 return {
 	"rachartier/tiny-inline-diagnostic.nvim",
 	name = "tiny_inline_diagnostics",
-	priority = 1000,
+	priority = 500,
 	config = function()
 		vim.diagnostic.config({ virtual_text = false }) -- disable vim diagnostics first
 
