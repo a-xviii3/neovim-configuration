@@ -62,3 +62,13 @@ create_aucmd("VimEnter", {
 	group = CUSTOM_AUGROUP,
 	callback = function() Quick_Settings.after() end,
 })
+
+-- save and load fold data
+create_aucmd({ "WinEnter", "BufWinEnter", "BufEnter", "FocusGained", "BufReadPost" }, {
+	group = CUSTOM_AUGROUP,
+	command = "silent! loadview 1",
+})
+create_aucmd({ "WinLeave", "BufWinLeave", "BufLeave", "FocusLost", "BufWritePre", "QuitPre" }, {
+	group = CUSTOM_AUGROUP,
+	command = "silent! mkview 1",
+})
