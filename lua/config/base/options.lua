@@ -6,7 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.signcolumn = "number" -- show useful signs like errors, warnings, notes, etc in the number column
 
 -- code folding
-vim.opt.foldmethod = "indent"
+vim.opt.foldmethod = "manual"
 vim.opt.foldcolumn = "0"
 vim.opt.foldtext = ""
 vim.opt.foldlevel = 999 -- folds at a level of nesting higher than this will be closed
